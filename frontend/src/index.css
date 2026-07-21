@@ -1,0 +1,56 @@
+:root {
+  --ink: #14181c;
+  --panel: #1b2229;
+  --panel-raised: #232b33;
+  --hairline: rgba(237, 238, 236, 0.1);
+  --paper: #efe7d4;
+  --paper-line: rgba(35, 32, 26, 0.16);
+  --text: #edeeec;
+  --text-dim: #9aa3ab;
+  --text-on-paper: #23201a;
+  --text-on-paper-dim: #6b6355;
+  --amber: #ffb627;
+  --amber-dim: #caa565;
+  --green: #4c9a6a;
+  --red: #c1443c;
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; }
+
+a { color: var(--amber); }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input:focus-visible,
+button:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
