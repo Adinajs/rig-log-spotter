@@ -8,7 +8,9 @@
 .app__header {
   padding: 20px 32px;
   border-bottom: 1px solid var(--hairline);
-  background: linear-gradient(180deg, var(--panel-raised), var(--panel));
+  background: var(--panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .app__brand {
@@ -125,9 +127,12 @@
 /* ---------- trip form ---------- */
 .trip-form {
   background: var(--panel-raised);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--hairline);
   border-radius: 16px;
   padding: 28px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
 }
 
 .trip-form__grid {
@@ -162,13 +167,20 @@
 }
 
 .trip-form input {
-  background: var(--ink);
+  background: rgba(0, 0, 0, 0.2);
   border: 1px solid var(--hairline);
   border-radius: 8px;
   padding: 11px 12px;
   color: var(--text);
   font-size: 14.5px;
   font-family: var(--font-mono);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.trip-form input:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px var(--amber-glow);
+  outline: none;
 }
 
 .trip-form input::placeholder {
@@ -184,19 +196,26 @@
 .trip-form__submit {
   margin-top: 22px;
   background: var(--amber);
-  color: var(--ink);
+  color: #000;
   border: none;
   border-radius: 9px;
   padding: 13px 28px;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
 }
 
 .trip-form__submit:hover:not(:disabled) {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(255, 182, 39, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--amber-glow);
+  background: #22ffff;
+}
+
+.trip-form__submit:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .trip-form__submit:disabled {
@@ -237,6 +256,7 @@
 
 .summary-stats__item {
   background: var(--panel-raised);
+  backdrop-filter: blur(8px);
   padding: 18px 14px;
   text-align: center;
 }
