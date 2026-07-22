@@ -5,7 +5,7 @@ A full-stack app for property-carrying truck drivers: enter a trip (current loca
 Built for the Spotter AI full-stack developer assessment.
 
 ## Live Demo 🌐
-- **Frontend App:** [https://rig-log-spotter-e1169vc6f-adinajs-projects.vercel.app](https://rig-log-spotter-e1169vc6f-adinajs-projects.vercel.app)
+- **Frontend App:** [https://rig-log-spotter.vercel.app](https://rig-log-spotter.vercel.app)
 - **Backend API:** [https://rig-log-spotter-production.up.railway.app](https://rig-log-spotter-production.up.railway.app)
 
 ## Stack 🛠️
@@ -59,7 +59,7 @@ The backend is deployed to Railway with a PostgreSQL database.
 ### Frontend → Vercel
 
 The frontend is deployed to Vercel as a Vite application.
-- App URL: `https://rig-log-spotter-e1169vc6f-adinajs-projects.vercel.app`
+- App URL: `https://rig-log-spotter.vercel.app`
 - Environment variable `VITE_API_BASE_URL` is set to point to the Railway backend.
 
 ## Project layout 📁
